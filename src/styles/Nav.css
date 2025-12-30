@@ -1,0 +1,119 @@
+nav{
+    position: sticky;
+    top: 10px;
+    margin: auto;
+    padding-left: 2px;
+    padding-right: 0;
+    width: 95vw;
+    height: 50px;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    overflow: hidden;
+}
+nav>.cxlogo{
+    width: 75px;
+    height: 75px;
+    /* transform: translate(0, -15%); */
+}
+.mobilebtn{
+    display: none;
+}
+.mobilemenu{
+    display: none;
+}
+.mobilemenuShow{
+    display: none;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.links li{
+    list-style: none;
+    /* margin-right: 25px; */
+    font-size: 1.25rem;
+    font-weight: lighter;
+    height: 100%;
+    padding: 15px 25px;
+    transition: background-color .2s ease-in;
+}
+/* .links li:last-child{
+    padding-right: 50px;
+} */
+.links li:hover{
+    background-color: #272727;
+}
+.links li:hover a{
+    color: white;
+}
+.links a{
+    text-decoration: none;
+    color: #272727;
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+        overflow: visible;
+        /* top: -20px; */
+    }
+    .mobilebtn{
+        position: relative;
+        top: 10px;
+        right: 20px;
+        display: block;
+        rotate: 270deg;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border: none;
+    }
+    .mobilemenu{
+        transition: display .3s ease;
+    }
+    .mobilemenuShow{
+        position: absolute;
+        width: 95vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        margin: 0;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        z-index: 99999;
+        transition: display .3s ease;
+    }
+    .logoElement{
+        border: none;
+        border-bottom: 1px rgba(39, 39, 39, 0) solid;
+    }
+    .mobilemenuShow li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.75rem;
+        width: 200px;
+        height: 70px;
+        border-bottom: 1px rgba(39, 39, 39, .5) solid;
+    }
+    .cxlogo-mobile{
+        width: 100px;
+    }
+    .mobilemenuShow li a{
+        text-decoration: none;
+        color: #272727;
+    }
+    .links{
+        display: none;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,249 @@
+h1{
+    color: white;
+}
+main{
+    width: 100vw;
+    /* height: 100vh; */
+    /* overflow-x: hidden; */
+}
+.content{
+    position: sticky;
+    margin-top: 10px;
+    z-index: 999;
+}
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    padding: 0;
+    /* overflow: hidden; */
+}
+.mainContent{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.hero > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+.searchbar{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#search{
+    width: 400px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid grey;
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+    padding: 0 10px;
+    z-index: 999;
+}
+#search:active{
+     width: 400px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid grey;
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+    padding: 0 10px;
+    z-index: 999;
+}
+.searchbar input:focus{
+    border: 1px solid grey;
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+}
+.heroContent{
+    position: relative;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    z-index: 999;
+}
+.mainText{
+    text-align: center;
+}
+.mainText h1{
+    font-size: 4.5rem;
+    transition: all 0.3s ease-in-out;
+}
+.mainText p{
+    font-family: 'Courier New', Courier, monospace;
+}
+.mainText h1>span{
+    color: rgb(10, 170, 10);
+    animation: pallette 2s infinite linear forwards;
+    transition: all .2s ease-in-out;
+}
+.actionButtons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 600px;
+    margin-top: 35px;
+}
+.countdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.show, .hide{
+    transition: all step-end    ;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+.whatiscx{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+}
+.whatiscximg{
+    width: 50%;
+    background-image: url(../assets/logos/logo1.png);
+    background-size: contain;
+    background-color: #272727;
+}
+.whatiscx .desc{
+    width: 50%;
+    background: linear-gradient(45deg, var(--maingreen), darkslategray, black);
+    padding: 20px;
+}
+.whatiscx .desc h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4rem;
+}
+.whatiscx .desc p{
+    margin-top: 10px;
+    font-size: 2rem;
+    color: white;
+}
+.gallery{
+    width: 100vw;   
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.gallery hr{
+    height: 300px;
+}
+.galleryText{
+    width: 50vw;
+    padding: 20px;
+}
+.galleryText h2{
+    font-size: 3.5rem;
+    margin: 10px 0;
+}
+.galleryText p{
+    font-size: 1.75rem;
+    margin: 5px 0;
+}
+.galleryImages{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 500px;
+    height: 500px;
+}
+
+@keyframes pallette {
+    0%{
+        color: #FF9FE5;
+    }
+    25%{
+        color: #0050fe;
+    }
+    50%{
+        color: whitesmoke;
+    }
+    75%{
+        color: rgb(10, 170, 10);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main{
+        width: 100vw;
+        overflow: hidden;
+    }
+    .hero{
+        width: 100vw;
+    }
+    .heroContent{
+        z-index: 0;
+    }
+    .whatiscx{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .whatiscx .desc{
+        width: 100vw;
+        height: 50vh;
+    }
+    .whatiscx .desc h1{
+        font-size: 2rem;
+    }
+    .whatiscx .desc p{
+        font-size: 1.5rem;
+    }
+    .whatiscximg{
+        height: 50%;
+        width: 100vw;
+        background-repeat: no-repeat;
+    }
+    .gallery{
+        padding: 0 10px;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        height: 150vh;
+    }
+    .gallery hr{
+        height: 2px;
+        width: 100px;
+        margin-bottom: 0;
+    }
+    .galleryText{
+        height: 50%;
+        width: 100vw;
+    }
+    .galleryText h1{
+        font-size: 2rem;
+        margin-top: 0;
+    }
+    .galleryText p{
+        font-size: 1.5rem;
+    }
+    .galleryImages{
+        width: 300px;
+        height: 300px;
+    }
+}

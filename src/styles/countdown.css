@@ -1,0 +1,27 @@
+.countdownTimer{
+    /* padding: 35px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* text-align: center; */
+    background-color: #272727;
+    font-size: 1.5rem;
+    width: 300px;
+    height: 70px;
+    border-radius: 15px;
+}
+.countdownTimer span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #131212;
+    height: 90%;
+    width: 70px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.countdownTimer span:hover{
+    color: #272727;
+    background-color: white;
+}
