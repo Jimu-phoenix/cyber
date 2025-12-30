@@ -208,12 +208,13 @@ main{
     .whatiscx .desc{
         width: 100vw;
         height: 50vh;
+        text-align: center;
     }
     .whatiscx .desc h1{
-        font-size: 2rem;
+        font-size: 2.15rem;
     }
     .whatiscx .desc p{
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
     .whatiscximg{
         height: 50%;
